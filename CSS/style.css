@@ -1249,49 +1249,59 @@ footer {
 }
 
 /*Popup dans enigme */
-.popupContainer {
-  display: none;
+.popup {
+  width: 30%;
+  height: 50vh;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-.popupContainer .popup {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background: linear-gradient(180deg, #3D2DA6 0%, #021740 90.43%);
   padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-}
-.popupContainer .popup .popupTitle {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.popupContainer .popup .popupText {
-  margin-bottom: 20px;
-}
-.popupContainer .popup .popupButton {
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.countdownTimer {
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
+.popup-content {
   text-align: center;
-  margin-top: 20px;
+}
+.popup-content h3 {
+  margin-bottom: 30px;
+}
+.popup-content p {
+  margin-bottom: 30px;
+}
+
+.submit {
+  margin-top: 10px;
+}
+
+.timer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+.coming-soon {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 24px;
+}
+
+.figma-logo {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url(chemin_vers_logo_figma);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
