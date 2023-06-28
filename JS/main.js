@@ -1,5 +1,5 @@
 // Charger le fichier JSON
-fetch('enigme.json')
+fetch('JS/enigme.json')
   .then(response => response.json())
   .then(data => {
     const enigmes = data.enigmes;
@@ -15,7 +15,8 @@ fetch('enigme.json')
       enigmInstructionPara.textContent = enigme.instruction;
     }
     
-    // Appeler la fonction pour afficher la première énigme par défaut
+    // Afficher la première énigme par défaut
     afficherEnigme(0);
   })
   .catch(error => console.error(error));
+// Les énigmes

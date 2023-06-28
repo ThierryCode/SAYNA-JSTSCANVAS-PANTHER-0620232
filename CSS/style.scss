@@ -1223,38 +1223,61 @@ footer {
 }
 /*Popup dans enigme */
 
-.popup {
+// Popup styles
+.popupContainer {
+    display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    background-color: #9e1010;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      
+      .popupTitle {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .popupText {
+        margin-bottom: 20px;
+      }
+      
+      .popupButton {
+        padding: 10px 20px;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  // Countdown timer styles
+  .countdownTimer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
     text-align: center;
-  }
-  
-  .contenu-popup {
-    margin-bottom: 20px;
-  }
-  
-  .countdown {
-    font-size: 16px;
-  }
-  
-  .coming-soon {
     margin-top: 20px;
   }
   
-  .coming-soon p {
-    font-weight: bold;
+  // Additional styles
+  .enigmeAsavoir {
+    // Styles for the enigmeAsavoir section
   }
   
-  .coming-soon img {
-    width: 100px;
-    height: auto;
-  }
+  // Add any additional styles for your page
   

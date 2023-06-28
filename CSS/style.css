@@ -1249,39 +1249,49 @@ footer {
 }
 
 /*Popup dans enigme */
-.popup {
+.popupContainer {
+  display: none;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.popupContainer .popup {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
-  background-color: #9e1010;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
   text-align: center;
+  border-radius: 8px;
 }
-
-.contenu-popup {
+.popupContainer .popup .popupTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.popupContainer .popup .popupText {
   margin-bottom: 20px;
 }
-
-.countdown {
-  font-size: 16px;
+.popupContainer .popup .popupButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.coming-soon {
-  margin-top: 20px;
-}
-
-.coming-soon p {
+.countdownTimer {
+  font-size: 24px;
   font-weight: bold;
-}
-
-.coming-soon img {
-  width: 100px;
-  height: auto;
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
