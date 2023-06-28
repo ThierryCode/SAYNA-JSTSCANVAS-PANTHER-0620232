@@ -1,52 +1,49 @@
-*,
-::after,
-::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@charset "UTF-8";
 @font-face {
   font-family: "pantheraregular";
-  src: url("../font/pantheraregular-mvz9j-webfont.woff2") format("woff2"),
-    url("../font/pantheraregular-mvz9j-webfont.woff") format("woff");
+  src: url("../font/pantheraregular-mvz9j-webfont.woff2") format("woff2"), url("../font/pantheraregular-mvz9j-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "beynoregular";
-  src: url("../font/beyno-webfont.woff2") format("woff2"),
-    url("../font/beyno-webfont.woff") format("woff");
+  src: url("../font/beyno-webfont.woff2") format("woff2"), url("../font/beyno-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "wakanda_foreverregular";
-  src: url("../font/wakandaforever-regular-webfont.woff2") format("woff2"),
-    url("../font/wakandaforever-regular-webfont.woff") format("woff");
+  src: url("../font/wakandaforever-regular-webfont.woff2") format("woff2"), url("../font/wakandaforever-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "cantarellregular";
-  src: url("../font/cantarell-regular-webfont.woff2") format("woff2"),
-    url("../font/cantarell-regular-webfont.woff") format("woff");
+  src: url("../font/cantarell-regular-webfont.woff2") format("woff2"), url("../font/cantarell-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-/* --------------^^ Les font family ^^---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url("../Allpages/arrière_plan.png");
   background-size: cover;
 }
+
 .navlink {
   width: 100%;
   height: 300px;
 }
+
 .header {
   width: 100%;
   height: 100vh;
 }
-/* --------------Les deux ligne vertical à gauche et les reseaux sociaux ---------------------- */
+
 .ligneGauche {
   position: fixed;
   width: 3px;
@@ -55,6 +52,7 @@ body {
   margin-left: 3%;
   z-index: 999;
 }
+
 .lignetDoite {
   position: relative;
   width: 3px;
@@ -63,6 +61,7 @@ body {
   margin-left: 6.5%;
   z-index: 999;
 }
+
 .ligneDroiteRs {
   width: 20px;
   height: 60vh;
@@ -75,6 +74,7 @@ body {
   justify-content: space-between;
   z-index: 999;
 }
+
 .reseauSociaux {
   width: 20px;
   height: 150px;
@@ -85,7 +85,7 @@ body {
   justify-content: space-between;
   z-index: 999;
 }
-/* ---------Partie barre de navigation et les 3 logos Sayna x Marvel--------------- */
+
 .logoNavigation {
   width: 100%;
   height: 100px;
@@ -97,8 +97,8 @@ body {
   justify-content: center;
   flex-direction: row;
   justify-content: space-between;
-  /* position: fixed; */
 }
+
 .logoSaynaXMarvel {
   width: 140px;
   height: auto;
@@ -107,13 +107,13 @@ body {
   justify-content: start;
   flex-direction: row;
   justify-content: space-between;
-  /* background-color: rgb(44, 42, 165); */
 }
+
 .headerNav {
   width: 500px;
   height: auto;
-  /* background-color: rgb(22, 58, 58); */
 }
+
 .navUl {
   width: 100%;
   height: auto;
@@ -122,8 +122,8 @@ body {
   justify-content: start;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: blueviolet; */
 }
+
 .item {
   list-style: none;
 }
@@ -133,7 +133,28 @@ body {
   color: #ffffff;
   font-size: 22px;
 }
-/* -------------Partie titre H1 et image de black Panther------------- */
+.item a::after {
+  content: "";
+  display: block;
+  margin: 0 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9e91b7;
+  transition: 0.2s ease-in-out;
+}
+.item a:hover {
+  color: #9e91b7;
+}
+.item a:hover::after {
+  width: 100%;
+}
+.item a.active-link {
+  color: #9e91b7;
+}
+.item a.active-link::after {
+  width: 100%;
+}
+
 .titleImage {
   width: 100%;
   height: auto;
@@ -141,15 +162,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: blueviolet; */
 }
+
 .titleInfos {
   position: relative;
   z-index: 999;
   width: 30%;
   height: auto;
   margin-top: 50px;
-  /* background-color: blueviolet; */
   margin-left: 200px;
 }
 .titleInfos h1 {
@@ -164,16 +184,20 @@ body {
   color: #9e91b7;
   margin-bottom: 30px;
 }
-.titleInfos p,
+.titleInfos p {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
 .titleInfos a {
   font-family: "cantarellregular";
   font-size: 16px;
   width: 90%;
   color: #ffffff;
 }
-.titleInfos p {
-  margin-bottom: 20px;
-}
+
 .HeaderImg {
   width: 65%;
   height: auto;
@@ -184,7 +208,648 @@ body {
   margin-right: 0px;
 }
 
-/* -------------------------Responsive header partie nav image et titre ------------------ */
+.article {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  right: 0;
+}
+
+.backgroundArticle {
+  width: 90%;
+  height: 345px;
+  right: 0;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #021740;
+}
+
+.Killmonger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.KilmongerContent {
+  padding: 20px;
+}
+.KilmongerContent h2 {
+  font-family: "beynoregular";
+  font-size: 32px;
+  color: #9e91b7;
+  margin-bottom: 30px;
+}
+.KilmongerContent p {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+}
+.KilmongerContent a {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+}
+
+.OkoyeContent {
+  padding: 20px;
+}
+.OkoyeContent h2 {
+  font-family: "beynoregular";
+  font-size: 32px;
+  color: #9e91b7;
+  margin-bottom: 30px;
+}
+.OkoyeContent p {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+}
+.OkoyeContent a {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+}
+
+.contenuCard {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 150px;
+}
+
+.contenu {
+  width: 60%;
+  padding: 50px;
+}
+.contenu h2 {
+  font-family: "beynoregular";
+  font-size: 32px;
+  color: #9e91b7;
+  margin-bottom: 30px;
+}
+.contenu p {
+  font-family: "cantarellregular";
+  width: 100% !important;
+  font-size: 16px;
+  width: 90%;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.tchallaImg {
+  position: absolute;
+  margin-top: 0px;
+}
+
+.card {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoTchalla {
+  background-color: #f2cef2;
+  width: 450px;
+  height: auto;
+  padding-top: 250px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  margin-top: 300px;
+  border-radius: 10px;
+}
+.infoTchalla h3 {
+  font-family: "cantarellregular";
+  text-align: center;
+  margin-top: 20px;
+}
+.infoTchalla p {
+  font-family: "cantarellregular";
+  text-align: justify;
+  margin-top: 10px;
+}
+.infoTchalla span {
+  font-family: "cantarellregular";
+  text-align: justify;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.minuscule {
+  font-family: "cantarellregular";
+  font-size: 10px;
+}
+
+.cardbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cardbutton button {
+  width: auto;
+  padding: 10px 15px;
+  background-color: #3d2da6;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "cantarellregular";
+  color: #ffffff;
+}
+
+.FormulaireDeContact {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Accueil/Pantherhome7.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm {
+  width: 55%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(223, 153, 242, 0.1853116246) 100%);
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+}
+.contactForm p {
+  font-family: "cantarellregular";
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: #021740;
+}
+.contactForm h2 {
+  font-family: "cantarellregular";
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: #021740;
+  font-size: 43px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 174px;
+  height: 54px;
+  border-radius: 38px;
+  font-family: "cantarellregular";
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #021740;
+  background-color: #f2cef2;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover {
+  box-shadow: 0 5px 20px #021740;
+}
+
+input {
+  width: 520px;
+  height: 56px;
+  border: 1px solid #021740;
+  border-radius: 38px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-family: "cantarellregular";
+  font-size: 14px;
+  color: #021740;
+  background-color: transparent;
+}
+input::placeholder {
+  color: #021740;
+}
+
+textarea {
+  width: 520px;
+  height: 25vh;
+  border-radius: 38px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #021740;
+  font-family: "cantarellregular";
+  font-size: 14px;
+  color: #021740;
+  resize: none;
+  outline: none;
+  background-color: transparent;
+}
+textarea::placeholder {
+  color: #021740;
+}
+
+footer {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../Allpages/back_footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerContent {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.SaynaMarvelCircle {
+  width: 40%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SaynaMarvelCircle img:first-of-type {
+  position: relative;
+}
+
+.logoFooter {
+  position: absolute;
+  width: 8%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pagesContactRsDroit {
+  width: 50%;
+  height: 30vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pagesContact {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pages {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+.pages p {
+  font-family: "cantarellregular";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 28%;
+}
+.pages a {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-family: "cantarellregular";
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.ContacRs {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+.ContacRs p {
+  font-family: "cantarellregular";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 28%;
+}
+
+.contactIconFooter {
+  width: 200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contactIconFooter .containerIcon:nth-child(1) {
+  background-color: #f2cef2;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactIconFooter .containerIcon:nth-child(2) {
+  background-color: #df99f2;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactIconFooter .containerIcon:nth-child(3) {
+  background-color: #3d2da6;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactIconFooter .containerIcon:nth-child(4) {
+  background-color: #07338c;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.droit {
+  width: 100%;
+  height: auto;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.droit p {
+  font-family: "cantarellregular";
+  font-size: 16px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+.droit span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #f2cef2;
+  border-radius: 50%;
+}
+
+.headerWakanda {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Wakanda/Pantherwakanda1.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.titleWakanda {
+  width: 80%;
+  padding: 200px;
+}
+.titleWakanda h1 {
+  font-family: "beynoregular";
+  font-size: 68px;
+  color: #9e91b7;
+  margin-bottom: 20px;
+}
+.titleWakanda h2 {
+  font-family: "wakanda_foreverregular";
+  font-size: 43px;
+  color: #9e91b7;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.titleWakanda P {
+  height: auto;
+  font-family: "cantarellregular";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.circle {
+  width: 45%;
+  height: 45%;
+}
+
+.contentwakanda {
+  background-image: url("../Wakanda/Pantherwakanda2.png");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.youtubLink {
+  margin: 0;
+  padding: 30px;
+  padding-left: 20%;
+  padding-right: auto;
+  width: 100%;
+  height: 300px;
+  font-size: 16px;
+  font-family: "cantarellregular";
+  background-color: #3d2da6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.youtubLink a {
+  text-align: center;
+  font-size: 16px;
+  font-family: "cantarellregular";
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.militaireImg {
+  width: 100%;
+  height: auto;
+}
+.militaireImg img {
+  width: 100%;
+}
+
+.titleImageEnigme {
+  width: 100%;
+  height: 100vh;
+  padding-right: 15%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  flex-direction: column;
+  background-image: url("../Enigme/Pantherenigme1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.titleEnigme {
+  width: 50%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.titleEnigme h1 {
+  display: block;
+  width: auto;
+  font-family: "beynoregular";
+  font-size: 68px;
+  color: #9e91b7;
+  padding: 20px;
+}
+
+.paragEnigme {
+  width: 45%;
+  height: 40vh;
+  background-image: url("../Enigme/Pantherenigme2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2% 3% 0px;
+  font-family: "cantarellregular";
+  color: #ffffff;
+}
+.paragEnigme p {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.enigmeAsavoir {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerEnigm {
+  width: 90%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.enigmTitle {
+  padding-left: 6%;
+  display: block;
+  width: 100%;
+  font-family: "wakanda_foreverregular";
+  font-size: 43px;
+  color: #9e91b7;
+  margin-bottom: 20px;
+  width: 50%;
+  text-align: justify;
+}
+
+.containerEnigmRespons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.transcriptionBox {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  align-items: justify;
+  width: 30%;
+}
+.transcriptionBox p:first-child {
+  font-family: "cantarellregular";
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.transcriptionBox p:nth-child(2) {
+  font-family: "cantarellregular";
+  color: #ffffff;
+  text-align: justify;
+}
+.transcriptionBox p:nth-child(2) span {
+  font-family: "wakanda_foreverregular";
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.reponse {
+  padding-left: 6%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  align-items: justify;
+}
+.reponse p {
+  font-family: "cantarellregular";
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.reponse input {
+  border: 1px solid #f2cef2;
+  margin-bottom: 150px;
+  color: #f2cef2;
+}
+.reponse input::placeholder {
+  color: #f2cef2;
+}
+.reponse button {
+  margin-left: 155px;
+  margin-bottom: 100px;
+}
+
 @media screen and (max-width: 1540px) {
   .logoNavigation {
     padding-left: 10%;
@@ -231,54 +896,6 @@ body {
     margin-bottom: 100px;
   }
 }
-/*--------------------Partie Article sur les personnages------------------*/
-.article {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  justify-content: end;
-  position: relative;
-  right: 0;
-}
-.backgroundArticle {
-  width: 90%;
-  height: 345px;
-  right: 0;
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #021740;
-}
-.Killmonger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.KilmongerContent,
-.OkoyeContent {
-  padding: 20px;
-}
-.KilmongerContent h2,
-.OkoyeContent h2 {
-  font-family: "beynoregular";
-  font-size: 32px;
-  color: #9e91b7;
-  margin-bottom: 30px;
-}
-.KilmongerContent p,
-.OkoyeContent p,
-.KilmongerContent a,
-.OkoyeContent a {
-  font-family: "cantarellregular";
-  font-size: 16px;
-  width: 90%;
-  color: #ffffff;
-}
-/* --------------responsive sur la partie Article sur les personnages --------------------------*/
 @media screen and (max-width: 1615px) {
   .backgroundArticle {
     width: 100%;
@@ -297,19 +914,26 @@ body {
     flex-direction: column;
     justify-content: space-around;
   }
+  .backgroundArticle h2 {
+    margin: auto;
+    text-align: center;
+  }
+  .backgroundArticle p {
+    margin: auto;
+    text-align: center;
+  }
   .article {
     width: 100%;
     height: auto;
   }
-  .backgroundArticle h2,
-  .backgroundArticle p,
-  .OkoyeContent a,
+  .OkoyeContent a {
+    margin: auto;
+    text-align: center;
+    display: block;
+  }
   .KilmongerContent a {
     margin: auto;
     text-align: center;
-  }
-  .OkoyeContent a,
-  .KilmongerContent a {
     display: block;
   }
 }
@@ -324,100 +948,6 @@ body {
     margin-bottom: 200px;
   }
 }
-/* --------------Fin responsive sur la partie Article sur les personnages --------------------------*/
-.contenuCard {
-  width: 100%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 150px;
-}
-.contenu {
-  width: 60%;
-  padding: 50px;
-}
-.contenu h2 {
-  font-family: "beynoregular";
-  font-size: 32px;
-  color: #9e91b7;
-  margin-bottom: 30px;
-}
-.contenu p {
-  font-family: "cantarellregular";
-  width: 100% !important;
-  font-size: 16px;
-  width: 90%;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-.tchallaImg {
-  position: absolute;
-  margin-top: 0px;
-}
-.card {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  justify-content: space-between;
-  /* background-color: bisque; */
-}
-.infoTchalla {
-  background-color: #f2cef2;
-  width: 450px;
-  height: auto;
-  padding-top: 250px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 100px;
-  margin-top: 300px;
-  border-radius: 10px;
-}
-.infoTchalla h3 {
-  font-family: "cantarellregular";
-  text-align: center;
-  margin-top: 20px;
-}
-.infoTchalla p {
-  font-family: "cantarellregular";
-  text-align: justify;
-  margin-top: 10px;
-}
-.infoTchalla span {
-  font-family: "cantarellregular";
-  text-align: justify;
-  margin-top: 10px;
-  font-weight: bold;
-}
-.minuscule {
-  font-family: "cantarellregular";
-  font-size: 10px;
-}
-.cardbutton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.cardbutton button {
-  width: auto;
-  padding: 10px 15px;
-  background-color: #3d2da6;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: "cantarellregular";
-  color: #ffffff;
-}
-/*-----------------Partie sur les synopsis et l'histoire de T'challa-----------------------*/
 @media screen and (max-width: 1024px) {
   .contenuCard {
     display: flex;
@@ -458,8 +988,6 @@ body {
     border-radius: 10px;
   }
 }
-/*-----------------Fin Partie sur les synopsis et l'histoire de T'challa-----------------------*/
-/*----------------- Responsive T'challa et quelque paramétrage dans le header-----------------------*/
 @media screen and (max-width: 515px) {
   .card {
     width: 100%;
@@ -471,7 +999,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  .titleInfos,
+  .card img {
+    width: 100%;
+  }
+  .titleInfos {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .titleInfos p {
     margin-left: 0px;
     margin-right: 0px;
@@ -481,9 +1015,6 @@ body {
     margin: 0px;
     padding-top: 20px;
     border-radius: 0px;
-  }
-  .card img {
-    width: 100%;
   }
 }
 @media screen and (max-width: 370px) {
@@ -496,103 +1027,6 @@ body {
     margin: 0px;
   }
 }
-/*----------------- Fin Responsive T'challa et quelque paramétrage dans le header-----------------------*/
-/*----------------- Section Formulaire de contact -----------------------*/
-.FormulaireDeContact {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../Accueil/Pantherhome7.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contactForm {
-  width: 55%;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(223, 153, 242, 0.18531162464985995) 100%
-  );
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-  border-radius: 200px;
-}
-.contactForm p {
-  font-family: "cantarellregular";
-  font-weight: bolder;
-  margin-bottom: 20px;
-  color: #021740;
-}
-.contactForm h2 {
-  font-family: "cantarellregular";
-  font-weight: bolder;
-  margin-bottom: 20px;
-  color: #021740;
-  font-size: 43px;
-}
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-}
-button {
-  width: 174px;
-  height: 54px;
-  border-radius: 38px;
-  font-family: "cantarellregular";
-  font-weight: bolder;
-  text-transform: uppercase;
-  color: #021740;
-  background-color: #f2cef2;
-  border: none;
-  cursor: pointer;
-}
-.submit:hover {
-  box-shadow: 0 5px 20px #021740;
-}
-input {
-  width: 520px;
-  height: 56px;
-  border: 1px solid #021740;
-  border-radius: 38px;
-  margin-bottom: 20px;
-  padding: 20px;
-  font-family: "cantarellregular";
-  font-size: 14px;
-  color: #021740;
-  background-color: transparent;
-}
-textarea {
-  width: 520px;
-  height: 25vh;
-  border-radius: 38px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #021740;
-  font-family: "cantarellregular";
-  font-size: 14px;
-  color: #021740;
-  resize: none;
-  outline: none;
-  background-color: transparent;
-}
-input::placeholder,
-textarea::placeholder {
-  color: #021740;
-}
-/* ------------Fin Formulaire de contact ---------------------- */
-/*------------------Responside pour le formulaire de contact-------------*/
 @media screen and (max-width: 1128px) {
   .contactForm {
     width: 55%;
@@ -602,11 +1036,7 @@ textarea::placeholder {
     justify-content: center;
     flex-direction: column;
     background: rgb(255, 255, 255);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(223, 153, 242, 0.18531162464985995) 100%
-    );
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(223, 153, 242, 0.1853116246) 100%);
     border-radius: 20px;
   }
 }
@@ -643,141 +1073,6 @@ textarea::placeholder {
     margin: 0px;
   }
 }
-/*------------------Fin responside pour le formulaire de contact-------------*/
-/* ------------------------------Section footer -------------------*/
-footer {
-  width: 100%;
-  height: 80vh;
-  background-image: url("../Allpages/back_footer.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.footerContent {
-  width: 90%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.SaynaMarvelCircle {
-  width: 40%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.SaynaMarvelCircle img:first-of-type {
-  position: relative;
-}
-.logoFooter {
-  position: absolute;
-  width: 8%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.pagesContactRsDroit {
-  width: 50%;
-  height: 30vh;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.pagesContact {
-  width: 100%;
-  height: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.pages,
-.ContacRs {
-  width: 50%;
-  height: 100%;
-  padding: 20px;
-}
-.pages p,
-.ContacRs p {
-  font-family: "cantarellregular";
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #ffffff;
-  letter-spacing: 28%;
-}
-.pages a {
-  display: block;
-  margin-bottom: 15px;
-  text-decoration: none;
-  font-family: "cantarellregular";
-  font-size: 18px;
-  color: #ffffff;
-}
-.contactIconFooter {
-  width: 200px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.contactIconFooter .containerIcon:nth-child(1) {
-  background-color: #f2cef2;
-  padding: 10px;
-  border-radius: 50%;
-}
-.contactIconFooter .containerIcon:nth-child(2) {
-  background-color: #df99f2;
-  padding: 10px;
-  border-radius: 50%;
-}
-.contactIconFooter .containerIcon:nth-child(3) {
-  background-color: #3d2da6;
-  padding: 10px;
-  border-radius: 50%;
-}
-.contactIconFooter .containerIcon:nth-child(4) {
-  background-color: #07338c;
-  padding: 10px;
-  border-radius: 50%;
-}
-.droit {
-  width: 100%;
-  height: auto;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-.droit p {
-  font-family: "cantarellregular";
-  font-size: 16px;
-  width: 100%;
-  color: #ffffff;
-  text-align: center;
-}
-.droit span {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background-color: #f2cef2;
-  border-radius: 50%;
-}
-/* ------------------------------ fin Section footer -------------------*/
-/* ------------------------------   Responsive du Section footer -------------------*/
-
 @media screen and (max-width: 765px) {
   .pagesContact {
     height: auto;
@@ -789,9 +1084,14 @@ footer {
     width: 100%;
     margin-right: 0;
     margin-top: 0;
+    width: 100%;
+    height: 20px;
+    margin: 0px;
+    padding-left: 200px;
   }
   .footerContent {
     width: 100%;
+    flex-direction: column;
   }
   .contactIconFooter {
     width: 150px;
@@ -802,9 +1102,6 @@ footer {
   .containerIcon img {
     width: 10px;
     height: 10px;
-  }
-  .footerContent {
-    flex-direction: column;
   }
   .pagesContact {
     width: 100%;
@@ -817,86 +1114,17 @@ footer {
   .SaynaMarvelCircle img {
     width: 100%;
   }
-  .droit {
-    width: 100%;
-    height: 20px;
-    margin: 0px;
-    padding-left: 200px;
-  }
 }
-/* --------------Fin responsive du Section footer -------------------*/
-/*----------------animation nav bar ----------------*/
-.item a::after {
-  content: "";
-  display: block;
-  margin: 0 0;
-  width: 0%;
-  height: 2px;
-  background-color: #9e91b7;
-  transition: 0.2s ease-in-out;
-}
-.item a:hover::after {
-  width: 100%;
-}
-.item a:hover {
-  color: #9e91b7;
-}
-.item a.active-link::after {
-  width: 100%;
-}
-
-.item a.active-link {
-  color: #9e91b7;
-}
-/*------------------Fin animation nav bar----------*/
-/*------------------Debut css wakanda--------------------*/
-/*----------HEADER WAKANDA----------------*/
-.headerWakanda {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../Wakanda/Pantherwakanda1.png");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: row;
-}
-.titleWakanda {
-  width: 80%;
-  padding: 200px;
-}
-.titleWakanda h1 {
-  font-family: "beynoregular";
-  font-size: 68px;
-  color: #9e91b7;
-  margin-bottom: 20px;
-}
-.titleWakanda h2 {
-  font-family: "wakanda_foreverregular";
-  font-size: 43px;
-  color: #9e91b7;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.titleWakanda P {
-  height: auto;
-  font-family: "cantarellregular";
-  font-size: 16px;
-  color: #ffffff;
-}
-.circle {
-  width: 45%;
-  height: 45%;
-}
-/*---------- Fin HEADER WAKANDA----------------*/
-/*-----------Partie responsive du header Wakanda-------------*/
 @media screen and (max-width: 670px) {
-  .titleWakanda,
+  .titleWakanda {
+    width: 100%;
+    margin-top: 200px;
+    left: 0;
+    right: 0;
+    padding: 0;
+  }
   .paragrapheCircle {
     width: 100%;
-    /* background-color: aqua; */
     margin-top: 200px;
     left: 0;
     right: 0;
@@ -906,48 +1134,11 @@ footer {
     align-items: start;
     justify-content: center;
   }
+  .contenu h2 {
+    line-height: 100%;
+    text-align: center;
+  }
 }
-/*---------------Contenu textuel wakanda ------------*/
-.contentwakanda {
-  background-image: url("../Wakanda/Pantherwakanda2.png");
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.youtubLink {
-  margin: 0;
-  padding: 30px;
-  padding-left: 20%;
-  padding-right: auto;
-  width: 100%;
-  height: 300px;
-  font-size: 16px;
-  font-family: "cantarellregular";
-  background-color: #3d2da6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-}
-.youtubLink a {
-  text-align: center;
-  font-size: 16px;
-  font-family: "cantarellregular";
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.militaireImg {
-  width: 100%;
-  height: auto;
-}
-.militaireImg img {
-  width: 100%;
-}
-@media screen and (max-width: 655px) {
-}
-/*-----------Partie responsive Wakanda-------------*/
 @media screen and (max-width: 700px) {
   .militaireImg {
     width: 100%;
@@ -955,12 +1146,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-}
-@media screen and (max-width: 670px) {
-  .contenu h2 {
-    line-height: 100%;
-    text-align: center;
   }
 }
 @media screen and (max-width: 620px) {
@@ -978,64 +1163,6 @@ footer {
     padding: 10px;
   }
 }
-/*----------- Fin partie responsive Wakanda-------------*/
-/*--------------Css Enigme-----------------*/
-/*---------------Header Enigme------------*/
-.titleImageEnigme {
-  width: 100%;
-  height: 100vh;
-  padding-right: 15%;
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  flex-direction: column;
-  background-image: url("../Enigme/Pantherenigme1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* background-color: aqua; */
-}
-.titleEnigme {
-  width: 50%;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  /* background-color: rgb(255, 0, 179); */
-}
-.titleEnigme h1 {
-  display: block;
-  width: auto;
-  font-family: "beynoregular";
-  font-size: 68px;
-  color: #9e91b7;
-  /* text-align: justify; */
-  padding: 20px;
-}
-.paragEnigme {
-  width: 45%;
-  height: 40vh;
-  background-image: url("../Enigme/Pantherenigme2.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2% 3% 0px;
-  font-family: "cantarellregular";
-  color: #ffffff;
-  /* background-color: rgb(4, 0, 255); */
-}
-.paragEnigme p {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* background-color: #df99f2; */
-}
-/*--------------- Fin Header Enigme------------*/
-/*--------------- Responsive Header Enigme------------*/
-
 @media screen and (max-width: 1300px) {
   .titleImageEnigme {
     width: 100%;
@@ -1053,116 +1180,6 @@ footer {
   .titleEnigme h1 {
     width: 100%;
   }
-}
-@media screen and (max-width: 1215px) {
-  .paragEnigme {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 1215px) {
-  .titleImageEnigme {
-    background-position: center;
-  }
-}
-@media screen and (max-width: 340px) {
-  .paragEnigme {
-    width: 100%;
-    text-align: justify;
-  }
-}
-/*----------Question et reponse Enigme---------------*/
-.enigmeAsavoir {
-  width: 100%;
-  height: auto;
-  /* background-color: #df99f2; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.containerEnigm {
-  width: 90%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.enigmTitle {
-  padding-left: 6%;
-  display: block;
-  width: 100%;
-  font-family: "wakanda_foreverregular";
-  font-size: 43px;
-  color: #9e91b7;
-  margin-bottom: 20px;
-  width: 50%;
-  /* background-color: #3d2da6; */
-  text-align: justify;
-}
-.containerEnigmRespons {
-  width: 100%;
-  height: auto;
-  /* background-color: #07338c; */
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.transcriptionBox {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  /* background-color: #df99f2; */
-  align-items: justify;
-}
-.transcriptionBox p:first-child,
-.reponse p {
-  font-family: "cantarellregular";
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.transcriptionBox p:nth-child(2) {
-  font-family: "cantarellregular";
-  color: #ffffff;
-  text-align: justify;
-}
-.transcriptionBox p:nth-child(2) span {
-  font-family: "wakanda_foreverregular";
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.transcriptionBox {
-  width: 30%;
-}
-.reponse input {
-  border: 1px solid #f2cef2;
-  margin-bottom: 150px;
-  color: #f2cef2;
-}
-.reponse input::placeholder {
-  color: #f2cef2;
-}
-.reponse {
-  padding-left: 6%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  /* background-color: #df99f2; */
-  align-items: justify;
-}
-.reponse button {
-  margin-left: 155px;
-  margin-bottom: 100px;
-}
-/*---------------Fin question et reponse Enigme---------------*/
-/*-----------Responsive pour la seceetion question et reponse Enigme--------------*/
-@media screen and (max-width: 1300px) {
   .enigmTitle {
     text-align: center;
     width: 100%;
@@ -1172,6 +1189,9 @@ footer {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
   }
   .paragEnigme {
     width: 100%;
@@ -1182,7 +1202,6 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-color: #df99f2; */
     align-items: justify;
   }
   .reponse input {
@@ -1193,9 +1212,20 @@ footer {
     margin: auto;
     margin-bottom: 100px;
   }
-  .containerEnigmRespons {
-    width: 100%;
-    height: auto;
-    padding-bottom: 5%;
+}
+@media screen and (max-width: 1215px) {
+  .paragEnigme {
+    width: 80%;
+  }
+  .titleImageEnigme {
+    background-position: center;
   }
 }
+@media screen and (max-width: 340px) {
+  .paragEnigme {
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

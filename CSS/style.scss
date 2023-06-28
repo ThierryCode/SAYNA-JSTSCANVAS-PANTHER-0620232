@@ -1,0 +1,1202 @@
+$color_1: #ffffff;
+$color_2: #9e91b7;
+$color_3: #021740;
+$color_4: #f2cef2;
+$font-family_1: "beynoregular";
+$font-family_2: "pantheraregular";
+$font-family_3: "cantarellregular";
+$font-family_4: "wakanda_foreverregular";
+$background-color_1: #f2cef2;
+$background-color_2: #021740;
+$background-color_3: #3d2da6;
+$background-color_4: transparent;
+$background-color_5: #df99f2;
+$background-color_6: #07338c;
+$background-color_7: #9e91b7;
+
+@font-face {
+	font-family: "pantheraregular";
+	src: url("../font/pantheraregular-mvz9j-webfont.woff2") format("woff2"), url("../font/pantheraregular-mvz9j-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "beynoregular";
+	src: url("../font/beyno-webfont.woff2") format("woff2"), url("../font/beyno-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "wakanda_foreverregular";
+	src: url("../font/wakandaforever-regular-webfont.woff2") format("woff2"), url("../font/wakandaforever-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "cantarellregular";
+	src: url("../font/cantarell-regular-webfont.woff2") format("woff2"), url("../font/cantarell-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+	background-image: url("../Allpages/arrière_plan.png");
+	background-size: cover;
+}
+.navlink {
+	width: 100%;
+	height: 300px;
+}
+.header {
+	width: 100%;
+	height: 100vh;
+}
+.ligneGauche {
+	position: fixed;
+	width: 3px;
+	height: 60vh;
+	background-color: $background-color_1;
+	margin-left: 3%;
+	z-index: 999;
+}
+.lignetDoite {
+	position: relative;
+	width: 3px;
+	height: 42vh;
+	background-color: $background-color_1;
+	margin-left: 6.5%;
+	z-index: 999;
+}
+.ligneDroiteRs {
+	width: 20px;
+	height: 60vh;
+	position: fixed;
+	margin-left: 4%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 999;
+}
+.reseauSociaux {
+	width: 20px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 999;
+}
+.logoNavigation {
+	width: 100%;
+	height: 100px;
+	margin: auto;
+	padding-left: 200px;
+	padding-right: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logoSaynaXMarvel {
+	width: 140px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.headerNav {
+	width: 500px;
+	height: auto;
+}
+.navUl {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.item {
+	list-style: none;
+	a {
+		text-decoration: none;
+		font-family: $font-family_1;
+		color: $color_1;
+		font-size: 22px;
+		&::after {
+			content: "";
+			display: block;
+			margin: 0 0;
+			width: 0%;
+			height: 2px;
+			background-color: $background-color_7;
+			transition: 0.2s ease-in-out;
+		}
+		&:hover {
+			&::after {
+				width: 100%;
+			}
+			color: $color_2;
+		}
+	}
+	a.active-link {
+		&::after {
+			width: 100%;
+		}
+		color: $color_2;
+	}
+}
+.titleImage {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.titleInfos {
+	position: relative;
+	z-index: 999;
+	width: 30%;
+	height: auto;
+	margin-top: 50px;
+	margin-left: 200px;
+	h1 {
+		font-family: $font-family_2;
+		font-size: 68px;
+		color: $color_2;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-family: $font-family_1;
+		font-size: 32px;
+		color: $color_2;
+		margin-bottom: 30px;
+	}
+	p {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+		margin-bottom: 20px;
+	}
+	a {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+	}
+}
+.HeaderImg {
+	width: 65%;
+	height: auto;
+	img {
+		width: 100%;
+		height: auto;
+		margin-right: 0px;
+	}
+}
+.article {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: end;
+	position: relative;
+	right: 0;
+}
+.backgroundArticle {
+	width: 90%;
+	height: 345px;
+	right: 0;
+	padding-left: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: $background-color_2;
+}
+.Killmonger {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.KilmongerContent {
+	padding: 20px;
+	h2 {
+		font-family: $font-family_1;
+		font-size: 32px;
+		color: $color_2;
+		margin-bottom: 30px;
+	}
+	p {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+	}
+	a {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+	}
+}
+.OkoyeContent {
+	padding: 20px;
+	h2 {
+		font-family: $font-family_1;
+		font-size: 32px;
+		color: $color_2;
+		margin-bottom: 30px;
+	}
+	p {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+	}
+	a {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+	}
+}
+.contenuCard {
+	width: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 150px;
+}
+.contenu {
+	width: 60%;
+	padding: 50px;
+	h2 {
+		font-family: $font-family_1;
+		font-size: 32px;
+		color: $color_2;
+		margin-bottom: 30px;
+	}
+	p {
+		font-family: $font-family_3;
+		width: 100% !important;
+		font-size: 16px;
+		width: 90%;
+		color: $color_1;
+		margin-bottom: 20px;
+		text-align: justify;
+	}
+}
+.tchallaImg {
+	position: absolute;
+	margin-top: 0px;
+}
+.card {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.infoTchalla {
+	background-color: $background-color_1;
+	width: 450px;
+	height: auto;
+	padding-top: 250px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 100px;
+	margin-top: 300px;
+	border-radius: 10px;
+	h3 {
+		font-family: $font-family_3;
+		text-align: center;
+		margin-top: 20px;
+	}
+	p {
+		font-family: $font-family_3;
+		text-align: justify;
+		margin-top: 10px;
+	}
+	span {
+		font-family: $font-family_3;
+		text-align: justify;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+}
+.minuscule {
+	font-family: $font-family_3;
+	font-size: 10px;
+}
+.cardbutton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	button {
+		width: auto;
+		padding: 10px 15px;
+		background-color: $background-color_3;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		font-family: $font-family_3;
+		color: $color_1;
+	}
+}
+.FormulaireDeContact {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../Accueil/Pantherhome7.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contactForm {
+	width: 55%;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(255, 255, 255);
+	background: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 153, 242, 0.18531162464985995) 100% );
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	border-radius: 200px;
+	p {
+		font-family: $font-family_3;
+		font-weight: bolder;
+		margin-bottom: 20px;
+		color: $color_3;
+	}
+	h2 {
+		font-family: $font-family_3;
+		font-weight: bolder;
+		margin-bottom: 20px;
+		color: $color_3;
+		font-size: 43px;
+	}
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+button {
+	width: 174px;
+	height: 54px;
+	border-radius: 38px;
+	font-family: $font-family_3;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: $color_3;
+	background-color: $background-color_1;
+	border: none;
+	cursor: pointer;
+}
+.submit {
+	&:hover {
+		box-shadow: 0 5px 20px #021740;
+	}
+}
+input {
+	width: 520px;
+	height: 56px;
+	border: 1px solid #021740;
+	border-radius: 38px;
+	margin-bottom: 20px;
+	padding: 20px;
+	font-family: $font-family_3;
+	font-size: 14px;
+	color: $color_3;
+	background-color: $background-color_4;
+	&::placeholder {
+		color: $color_3;
+	}
+}
+textarea {
+	width: 520px;
+	height: 25vh;
+	border-radius: 38px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 1px solid #021740;
+	font-family: $font-family_3;
+	font-size: 14px;
+	color: $color_3;
+	resize: none;
+	outline: none;
+	background-color: $background-color_4;
+	&::placeholder {
+		color: $color_3;
+	}
+}
+footer {
+	width: 100%;
+	height: 80vh;
+	background-image: url("../Allpages/back_footer.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footerContent {
+	width: 90%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.SaynaMarvelCircle {
+	width: 40%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		&:first-of-type {
+			position: relative;
+		}
+	}
+}
+.logoFooter {
+	position: absolute;
+	width: 8%;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.pagesContactRsDroit {
+	width: 50%;
+	height: 30vh;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.pagesContact {
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pages {
+	width: 50%;
+	height: 100%;
+	padding: 20px;
+	p {
+		font-family: $font-family_3;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		font-size: 22px;
+		color: $color_1;
+		letter-spacing: 28%;
+	}
+	a {
+		display: block;
+		margin-bottom: 15px;
+		text-decoration: none;
+		font-family: $font-family_3;
+		font-size: 18px;
+		color: $color_1;
+	}
+}
+.ContacRs {
+	width: 50%;
+	height: 100%;
+	padding: 20px;
+	p {
+		font-family: $font-family_3;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		font-size: 22px;
+		color: $color_1;
+		letter-spacing: 28%;
+	}
+}
+.contactIconFooter {
+	width: 200px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: row;
+	justify-content: space-between;
+	.containerIcon {
+		&:nth-child(1) {
+			background-color: $background-color_1;
+			padding: 10px;
+			border-radius: 50%;
+		}
+		&:nth-child(2) {
+			background-color: $background-color_5;
+			padding: 10px;
+			border-radius: 50%;
+		}
+		&:nth-child(3) {
+			background-color: $background-color_3;
+			padding: 10px;
+			border-radius: 50%;
+		}
+		&:nth-child(4) {
+			background-color: $background-color_6;
+			padding: 10px;
+			border-radius: 50%;
+		}
+	}
+}
+.droit {
+	width: 100%;
+	height: auto;
+	margin: 0px !important;
+	padding: 0px !important;
+	p {
+		font-family: $font-family_3;
+		font-size: 16px;
+		width: 100%;
+		color: $color_1;
+		text-align: center;
+	}
+	span {
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		background-color: $background-color_1;
+		border-radius: 50%;
+	}
+}
+.headerWakanda {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../Wakanda/Pantherwakanda1.png");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: row;
+}
+.titleWakanda {
+	width: 80%;
+	padding: 200px;
+	h1 {
+		font-family: $font-family_1;
+		font-size: 68px;
+		color: $color_2;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-family: $font-family_4;
+		font-size: 43px;
+		color: $color_2;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	P {
+		height: auto;
+		font-family: $font-family_3;
+		font-size: 16px;
+		color: $color_1;
+	}
+}
+.circle {
+	width: 45%;
+	height: 45%;
+}
+.contentwakanda {
+	background-image: url("../Wakanda/Pantherwakanda2.png");
+	background-position: top;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.youtubLink {
+	margin: 0;
+	padding: 30px;
+	padding-left: 20%;
+	padding-right: auto;
+	width: 100%;
+	height: 300px;
+	font-size: 16px;
+	font-family: $font-family_3;
+	background-color: $background-color_3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+	a {
+		text-align: center;
+		font-size: 16px;
+		font-family: $font-family_3;
+		color: $color_1;
+		margin-bottom: 20px;
+	}
+}
+.militaireImg {
+	width: 100%;
+	height: auto;
+	img {
+		width: 100%;
+	}
+}
+.titleImageEnigme {
+	width: 100%;
+	height: 100vh;
+	padding-right: 15%;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	flex-direction: column;
+	background-image: url("../Enigme/Pantherenigme1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.titleEnigme {
+	width: 50%;
+	height: 30vh;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	h1 {
+		display: block;
+		width: auto;
+		font-family: $font-family_1;
+		font-size: 68px;
+		color: $color_2;
+		padding: 20px;
+	}
+}
+.paragEnigme {
+	width: 45%;
+	height: 40vh;
+	background-image: url("../Enigme/Pantherenigme2.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2% 3% 0px;
+	font-family: $font-family_3;
+	color: $color_1;
+	p {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+.enigmeAsavoir {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.containerEnigm {
+	width: 90%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+.enigmTitle {
+	padding-left: 6%;
+	display: block;
+	width: 100%;
+	font-family: $font-family_4;
+	font-size: 43px;
+	color: $color_2;
+	margin-bottom: 20px;
+	width: 50%;
+	text-align: justify;
+}
+.containerEnigmRespons {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.transcriptionBox {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	align-items: justify;
+	width: 30%;
+	p {
+		&:first-child {
+			font-family: $font-family_3;
+			color: $color_1;
+			margin-bottom: 20px;
+		}
+		&:nth-child(2) {
+			font-family: $font-family_3;
+			color: $color_1;
+			text-align: justify;
+			span {
+				font-family: $font-family_4;
+				color: $color_1;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+.reponse {
+	p {
+		font-family: $font-family_3;
+		color: $color_1;
+		margin-bottom: 20px;
+	}
+	input {
+		border: 1px solid #f2cef2;
+		margin-bottom: 150px;
+		color: $color_4;
+		&::placeholder {
+			color: $color_4;
+		}
+	}
+	padding-left: 6%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	align-items: justify;
+	button {
+		margin-left: 155px;
+		margin-bottom: 100px;
+	}
+}
+@media screen and (max-width: 1540px) {
+	.logoNavigation {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+@media screen and (max-width: 792px) {
+	.logoNavigation {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+@media screen and (max-width: 750px) {
+	.logoNavigation {
+		padding-left: 5%;
+		padding-right: 5%;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 510px) {
+	.headerNav {
+		width: 80%;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 910px) {
+	.titleImage {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.titleInfos {
+		width: 80%;
+		margin-left: auto;
+	}
+	.HeaderImg {
+		min-width: 300px;
+		height: auto;
+		img {
+			width: 100%;
+			height: auto;
+			margin-top: 50px;
+			margin-bottom: 100px;
+		}
+	}
+}
+@media screen and (max-width: 1615px) {
+	.backgroundArticle {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1460px) {
+	.backgroundArticle {
+		padding: 30px;
+		margin: auto;
+		width: 90%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-around;
+		h2 {
+			margin: auto;
+			text-align: center;
+		}
+		p {
+			margin: auto;
+			text-align: center;
+		}
+	}
+	.article {
+		width: 100%;
+		height: auto;
+	}
+	.OkoyeContent {
+		a {
+			margin: auto;
+			text-align: center;
+			display: block;
+		}
+	}
+	.KilmongerContent {
+		a {
+			margin: auto;
+			text-align: center;
+			display: block;
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	.backgroundArticle {
+		top: 100px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.backgroundArticle {
+		width: 100%;
+		margin-bottom: 200px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.contenuCard {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 0px;
+		margin: auto;
+	}
+	.contenu {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: auto;
+	}
+	.card {
+		width: 100%;
+		min-width: 350px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.infoTchalla {
+		background-color: $background-color_1;
+		width: 100%;
+		height: auto;
+		padding-top: 250px;
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 100px;
+		margin-top: 300px;
+		border-radius: 10px;
+	}
+}
+@media screen and (max-width: 515px) {
+	.card {
+		width: 100%;
+		min-width: 350px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: space-between;
+		img {
+			width: 100%;
+		}
+	}
+	.titleInfos {
+		margin-left: 0px;
+		margin-right: 0px;
+		p {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+	.infoTchalla {
+		width: 100%;
+		margin: 0px;
+		padding-top: 20px;
+		border-radius: 0px;
+	}
+}
+@media screen and (max-width: 370px) {
+	.KillmongerImage {
+		margin: 0px;
+		padding: 0px;
+		img {
+			width: 100%;
+			margin: 0px;
+		}
+	}
+}
+@media screen and (max-width: 1128px) {
+	.contactForm {
+		width: 55%;
+		height: 70vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: rgb(255, 255, 255);
+		background: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 153, 242, 0.18531162464985995) 100% );
+		border-radius: 20px;
+	}
+}
+@media screen and (max-width: 1030px) {
+	input {
+		width: 400px;
+	}
+	textarea {
+		width: 400px;
+	}
+}
+@media screen and (max-width: 800px) {
+	input {
+		width: 300px;
+	}
+	textarea {
+		width: 300px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.contactForm {
+		width: 100%;
+		height: auto;
+		padding-bottom: 10px;
+		border-radius: 0px;
+	}
+	.tchallaImg {
+		position: relative;
+		width: 100%;
+		padding: 0px;
+		img {
+			width: 100%;
+			margin: 0px;
+		}
+	}
+}
+@media screen and (max-width: 765px) {
+	.pagesContact {
+		height: auto;
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 555px) {
+	.droit {
+		width: 100%;
+		margin-right: 0;
+		margin-top: 0;
+		width: 100%;
+		height: 20px;
+		margin: 0px;
+		padding-left: 200px;
+	}
+	.footerContent {
+		width: 100%;
+		flex-direction: column;
+	}
+	.contactIconFooter {
+		width: 150px;
+	}
+	.containerIcon {
+		padding: 2px;
+		img {
+			width: 10px;
+			height: 10px;
+		}
+	}
+	.pagesContact {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+	}
+	.pagesContactRsDroit {
+		width: 100%;
+	}
+	.SaynaMarvelCircle {
+		img {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 670px) {
+	.titleWakanda {
+		width: 100%;
+		margin-top: 200px;
+		left: 0;
+		right: 0;
+		padding: 0;
+	}
+	.paragrapheCircle {
+		width: 100%;
+		margin-top: 200px;
+		left: 0;
+		right: 0;
+		padding: 0;
+	}
+	.headerWakanda {
+		align-items: start;
+		justify-content: center;
+	}
+	.contenu {
+		h2 {
+			line-height: 100%;
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.militaireImg {
+		width: 100%;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 620px) {
+	.contenu {
+		p {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 440px) {
+	.youtubLink {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 420px) {
+	.youtubLink {
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.titleImageEnigme {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0;
+		text-align: center;
+	}
+	.titleEnigme {
+		width: 100%;
+		padding: auto;
+		h1 {
+			width: 100%;
+		}
+	}
+	.enigmTitle {
+		text-align: center;
+		width: 100%;
+		padding-left: 0px;
+	}
+	.containerEnigmRespons {
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		height: auto;
+		padding-bottom: 5%;
+	}
+	.paragEnigme {
+		width: 100%;
+	}
+	.reponse {
+		padding-left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		align-items: justify;
+		input {
+			border: 1px solid #f2cef2;
+			margin-bottom: 100px;
+		}
+		button {
+			margin: auto;
+			margin-bottom: 100px;
+		}
+	}
+}
+@media screen and (max-width: 1215px) {
+	.paragEnigme {
+		width: 80%;
+	}
+	.titleImageEnigme {
+		background-position: center;
+	}
+}
+@media screen and (max-width: 340px) {
+	.paragEnigme {
+		width: 100%;
+		text-align: justify;
+	}
+}
