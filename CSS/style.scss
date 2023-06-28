@@ -1200,3 +1200,61 @@ footer {
 		text-align: justify;
 	}
 }
+
+/*Les enigmes */
+.enigmInstruction{
+    width: 50%;
+    height: 200px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: space-around;
+    h2{
+        font-family: $font-family_1;
+        text-decoration: underline;
+		color: $background-color_7;
+		font-size: 22px;
+    }
+    p{
+        font-family: $font-family_3;
+        color: $color_1;
+    }
+}
+/*Popup dans enigme */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: #9e1010;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .contenu-popup {
+    margin-bottom: 20px;
+  }
+  
+  .countdown {
+    font-size: 16px;
+  }
+  
+  .coming-soon {
+    margin-top: 20px;
+  }
+  
+  .coming-soon p {
+    font-weight: bold;
+  }
+  
+  .coming-soon img {
+    width: 100px;
+    height: auto;
+  }
+  
